@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Rick and Morty</h1>
+
+		<input class="search" type="search" />
+
+		<div class="mydict">
+			<div>
+				<label>
+					<input id="all" type="radio" name="radio" checked="" />
+					<span>All</span>
+				</label>
+				<label>
+					<input id="Alive" type="radio" name="radio" checked="" />
+					<span>Alive</span>
+				</label>
+				<label>
+					<input id="Dead" type="radio" name="radio" />
+					<span>Dead</span>
+				</label>
+				<label>
+					<input id="unknown" type="radio" name="radio" />
+					<span>Unknown</span>
+				</label>
+			</div>
+		</div>
+
+		<div class="list"></div>
+
+		<div class="pagination">
+			<button class="prev">prev</button>
+			<button class="page">1</button>
+			<button class="next">next</button>
+		</div>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,155 @@
+h1 {
+	text-align: center;
+	color: rgb(75, 206, 173) !important;
+}
+
+body {
+	color: white;
+	font-family: "Tilt Prism", cursive;
+	height: 100vh;
+	background-color: #010333;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='418' height='418' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%2344033B' stroke-width='4.6'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23786E08'%3E%3Ccircle cx='769' cy='229' r='6'/%3E%3Ccircle cx='539' cy='269' r='6'/%3E%3Ccircle cx='603' cy='493' r='6'/%3E%3Ccircle cx='731' cy='737' r='6'/%3E%3Ccircle cx='520' cy='660' r='6'/%3E%3Ccircle cx='309' cy='538' r='6'/%3E%3Ccircle cx='295' cy='764' r='6'/%3E%3Ccircle cx='40' cy='599' r='6'/%3E%3Ccircle cx='102' cy='382' r='6'/%3E%3Ccircle cx='127' cy='80' r='6'/%3E%3Ccircle cx='370' cy='105' r='6'/%3E%3Ccircle cx='578' cy='42' r='6'/%3E%3Ccircle cx='237' cy='261' r='6'/%3E%3Ccircle cx='390' cy='382' r='6'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.list {
+	margin-top: 80px;
+	display: flex;
+	padding: 0 30px;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 35px;
+}
+
+.card {
+	max-width: 200px;
+	width: 100%;
+	background-color: midnightblue;
+	border-radius: 5px;
+	transition: all 0.5s;
+	box-shadow: 2px 2px 0px hsl(0, 0%, 90%), 6px 6px 0px hsl(0, 0%, 70%),
+		10px 10px 0px hsl(0, 0%, 50%), 18px 18px 0px hsl(0, 0%, 10%);
+	padding: 15px 0;
+	border: 1px solid white;
+	margin: 0 15px;
+	margin-bottom: 80px;
+}
+
+.card:hover {
+	transform: translateY(-0.66em);
+	font-size: 20px;
+	color: rgb(75, 206, 173);
+	animation: wiggle 2s linear infinite;
+	box-shadow: none;
+}
+
+.card h2 {
+	font-size: 18px;
+	text-align: center;
+	padding: 0 10px;
+	margin-top: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.list .card .img img {
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 150px;
+}
+
+.pagination {
+	display: flex;
+	width: fit-content;
+	margin: 0 auto;
+	gap: 10px;
+}
+
+.pagination button {
+	margin-bottom: 30px;
+	background-color: midnightblue;
+	border-radius: 5px;
+	border: none;
+	color: white;
+	padding: 5px 15px;
+	font-size: 18px;
+	font-weight: 700;
+
+	cursor: pointer;
+}
+
+.search {
+	border-radius: 5px;
+	background-color: #010333;
+	/* background-color: midnightblue; */
+	border: 1px solid white;
+	color: #ffffff;
+	font-weight: 700;
+
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	padding: 5px;
+	z-index: 10;
+}
+
+:focus {
+	outline: 0;
+	border-color: #2260ff;
+	box-shadow: 0 0 0 4px #b5c9fc;
+}
+
+.mydict div {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 0.5rem;
+	justify-content: center;
+}
+
+.mydict input[type="radio"] {
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.mydict input[type="radio"]:checked + span {
+	box-shadow: 0 0 0 0.0625em #0043ed;
+	background-color: #dee7ff;
+	z-index: 1;
+	color: #0043ed;
+}
+
+.mydict #Dead[type="radio"]:checked + span {
+	box-shadow: 0 0 0 0.0625em red;
+	background-color: #dee7ff;
+	z-index: 1;
+	color: red;
+}
+
+label span {
+	display: block;
+	cursor: pointer;
+	background-color: #fff;
+	padding: 0.375em 0.75em;
+	position: relative;
+	margin-left: 0.0625em;
+	box-shadow: 0 0 0 0.0625em #b5bfd9;
+	letter-spacing: 0.05em;
+	color: #3e4963;
+	text-align: center;
+	transition: background-color 0.5s ease;
+}
+
+label:first-child span {
+	border-radius: 0.375em 0 0 0.375em;
+}
+
+label:last-child span {
+	border-radius: 0 0.375em 0.375em 0;
+}
