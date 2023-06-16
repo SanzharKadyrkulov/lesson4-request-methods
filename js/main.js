@@ -6,7 +6,6 @@ const cards = document.getElementsByClassName("card");
 const searchInp = document.querySelector(".search");
 const radios = document.querySelectorAll("input[type='radio']");
 
-console.log(radios);
 let page = 1;
 let pageTotalCount = 1;
 
@@ -35,7 +34,7 @@ async function render() {
 	list.innerHTML = "";
 	character.results.forEach((item) => {
 		list.innerHTML += `
-    <div id="${item.status + "," + item.name}" class="card">
+    <div id="${item.species + "," + item.name}" class="card">
         <h2>${item.name}</h2>
         <div class="img">
           <img
@@ -51,11 +50,11 @@ async function render() {
 
 	for (let card of cards) {
 		card.addEventListener("mouseenter", () => {
-			const [status, name] = card.id.split(",");
-			card.children[0].innerText = status;
+			const [species, name] = card.id.split(",");
+			card.children[0].innerText = species;
 		});
 		card.addEventListener("mouseleave", () => {
-			const [status, name] = card.id.split(",");
+			const [species, name] = card.id.split(",");
 			card.children[0].innerText = name;
 		});
 	}
@@ -87,6 +86,7 @@ searchInp.addEventListener("input", () => {
 radios.forEach((item) => {
 	item.addEventListener("change", (e) => {
 		filter = e.target.id;
+		page = 1;
 
 		if (e.target.id == "all") {
 			filter = "";
